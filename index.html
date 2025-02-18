@@ -78,7 +78,7 @@
         /* Hero section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('IMG_0882.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -86,6 +86,16 @@
             color: var(--light-text);
         }
         
+        .hero-tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin: 1rem 0 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
         .hero-content {
             max-width: 800px;
         }
@@ -101,6 +111,11 @@
             margin-bottom: 2rem;
         }
         
+        .hero p:first-of-type {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
         .btn {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -150,16 +165,25 @@
             margin-bottom: 2rem;
             position: relative;
             padding-bottom: 0.5rem;
+            text-align: center;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 60px;
             height: 3px;
             background-color: var(--accent-color);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-top: 1.5rem;
+            font-weight: 600;
         }
         
         /* Services section */
@@ -225,6 +249,50 @@
             font-weight: 600;
         }
         
+        .clients {
+            padding: 6rem 0;
+            background-color: white;
+            text-align: center;
+        }
+
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .client-logo {
+            margin: 1.5rem;
+            transition: all 0.3s ease;
+            filter: grayscale(100%) opacity(70%);
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0%) opacity(100%);
+            transform: scale(1.05);
+        }
+
+        .client-logo img {
+            max-width: 250px;
+            max-height: 145px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .client-logo {
+                margin: 1rem;
+            }
+            
+            .client-logo img {
+                max-width: 180px;
+                max-height: 100px;
+            }
+        }
+
+
         /* Contact section */
         .contact {
             padding: 6rem 0;
@@ -329,7 +397,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Jeff Blain</h1>
-            <p>Corporate Mentalist & Mind Reader</p>
+            <p>Corporate Mentalist & Master of the Impossible <i class="fas fa-smile-wink"></i></p>
+            <p class="hero-tagline">"Prepare to be amazed, entertained, and left wondering... 'How did he do that?'"</i></p>
             <a href="#contact" class="btn">Book Now</a>
         </div>
     </section>
@@ -339,13 +408,18 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
-                    <p>With over a decade of experience performing for corporate audiences worldwide, Jeff Blain delivers unforgettable experiences that blur the line between reality and illusion.</p>
-                    <p>Specializing in mentalism, mind reading, and psychological illusions, Jeff creates custom experiences that engage, entertain, and inspire your team or clients.</p>
-                    <p>Each performance is tailored to meet your specific objectives, whether you're looking to break the ice at a conference, create lasting memories at a corporate event, or impress clients with something truly extraordinary.</p>
+                    <h2 class="section-title">About Jeff</h2>
+                    <p>The Mentalist Jeff Blain has been capturing the imagination of his audience for more than 30 years.</p>
+                    <p>Although less known by the general public since he does not perform on public stage or on TV, he is well known and widely respected in the field by other magicians and mentalists, not only here in Canada, but worldwide by the people in the business. Jeff is one of the pioneers of mentalism in Quebec. He was also a consultant for television and film.</p>
+                    <p>He masters close-up mentalism (manipulation, influence, mind reading) and stand-up magic using sleight of hands. His vast magical background combined with his dynamic display of showmanship and his certification in NLP (Neuro Linguistic Programming) enables Jeff to influence human perceptions using techniques in psychology and hypnosis to make you believe anything is possible!</p>
+                    <p>Jeff performs at corporate functions, private parties and special events for major corporations across Canada, USA, France and Mexico. His charisma, his attention and his ability to captivate people and to make them interact with each other is a guaranteed success and the highlight of every evening.</p>
+                    <p>Conferences, promotional events, cocktails, seminars and conventions are miraculously transformed into memorable and inspirational events.</p>
+                    <p class="tagline"><em>A lot more than magic!</em></p>
                 </div>
                 <div class="about-image">
-                    <img src="/api/placeholder/500/700" alt="Jeff Blain performing">
+                    <img src="IMG_sof1.jpg" alt="Jeff Blain performing">
+                    <img src="IMG_sof2.jpg" alt="Jeff Blain performing">
+                    <img src="Image438.jpg" alt="Jeff Blain performing">
                 </div>
             </div>
         </div>
@@ -354,34 +428,34 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">My Services</h2>
+            <h2 class="section-title">The Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-glass-cheers"></i>
                     </div>
-                    <h3 class="service-title">Corporate Events</h3>
-                    <p>Elevate your corporate gatherings with mind-bending performances that leave your team talking for months.</p>
+                    <h3 class="service-title">The Cocktail</h3>
+                    <p>Perfect for gatherings of 40+ guests, Jeff will circulate through your event, engaging groups with astonishing mind reading and magical interactions. His performances naturally encourage guests to interact, creating an atmosphere of wonder and connection that transforms ordinary events into unforgettable experiences.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3 class="service-title">Client Entertainment</h3>
-                    <p>Impress potential clients and strengthen relationships with existing ones through unforgettable experiences.</p>
+                    <h3 class="service-title">The Trade Show</h3>
+                    <p>Looking to promote your company's product or impress your clients? Jeff will integrate your product directly into his performances, creating a memorable branded experience. Your guests will receive promotional items as lasting reminders of your distinguished event and unforgettable company.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-microphone"></i>
+                        <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h3 class="service-title">Keynote Performances</h3>
-                    <p>Combine powerful messaging with extraordinary demonstrations that reinforce your conference themes.</p>
+                    <h3 class="service-title">The Fundraiser</h3>
+                    <p>Take your fundraiser to the next level with Jeff's unique interactive formula. Guests play against the Mentalist, placing bets that he'll double if he loses. This engaging approach accumulates funds quickly while keeping everyone thoroughly entertained throughout your event.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section 
     <section id="testimonials" class="testimonials">
         <div class="container">
             <h2 class="section-title">What Clients Say</h2>
@@ -390,29 +464,152 @@
                     <p class="testimonial-text">"Jeff's performance at our annual executive retreat was nothing short of astounding. Our team is still talking about it months later!"</p>
                     <p class="testimonial-author">- Sarah Johnson, VP of Operations at Global Solutions Inc.</p>
                 </div>
-                <!-- More testimonials would be added here in a real slider implementation -->
+                <!-- More testimonials would be added here in a real slider implementation 
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2 class="section-title">Trusted By</h2>
+            <div class="client-logos">
+                <!-- Replace the placeholder images with your actual client logos -->
+                <div class="client-logo">
+                    <img src="accor.jpg" alt="Accor">
+                </div>
+                <div class="client-logo">
+                    <img src="biftheque.jpg" alt="biftheque">
+                </div>
+                <div class="client-logo">
+                    <img src="BNC.jpg" alt="BNC">
+                </div>
+                <div class="client-logo">
+                    <img src="bombardier.jpg" alt="bombardier">
+                </div>
+                <div class="client-logo">
+                    <img src="canon.jpg" alt="canon">
+                </div>
+                <div class="client-logo">
+                    <img src="carquest.jpg" alt="carquest">
+                </div>
+                <div class="client-logo">
+                    <img src="Cirquedusoleil.jpg" alt="Cirquedusoleil">
+                </div>
+                <div class="client-logo">
+                    <img src="Esso.jpg" alt="Esso">
+                </div>
+                <div class="client-logo">
+                    <img src="Forces.jpg" alt="Forces">
+                </div>
+                <div class="client-logo">
+                    <img src="globaltv.jpg" alt="globaltv">
+                </div>
+                <div class="client-logo">
+                    <img src="houston.jpg" alt="houston">
+                </div>
+                <div class="client-logo">
+                    <img src="hp.jpg" alt="hp">
+                </div>
+                <div class="client-logo">
+                    <img src="IBM.jpg" alt="IBM">
+                </div>
+                <div class="client-logo">
+                    <img src="kraft.jpg" alt="kraft">
+                </div>
+                <div class="client-logo">
+                    <img src="loreal.jpg" alt="loreal">
+                </div>
+                <div class="client-logo">
+                    <img src="mirador.jpg" alt="mirador">
+                </div>
+                <div class="client-logo">
+                    <img src="napa.jpg" alt="napa">
+                </div>
+                <div class="client-logo">
+                    <img src="NewYorkTimes.jpg" alt="NewYorkTimes">
+                </div>
+                <div class="client-logo">
+                    <img src="outback.jpg" alt="outback">
+                </div>
+                <div class="client-logo">
+                    <img src="PJC.jpg" alt="PJC">
+                </div>
+                <div class="client-logo">
+                    <img src="portdemontreal.jpg" alt="portdemontreal">
+                </div>
+                <div class="client-logo">
+                    <img src="quebecor.jpg" alt="quebecor">
+                </div>
+                <div class="client-logo">
+                    <img src="radiocanada.jpg" alt="radiocanada">
+                </div>
+                <div class="client-logo">
+                    <img src="Rogers.jpg" alt="Rogers">
+                </div>
+                <div class="client-logo">
+                    <img src="rougefm.jpg" alt="rougefm">
+                </div>
+                <div class="client-logo">
+                    <img src="sofitel.jpg" alt="sofitel">
+                </div>
+                <div class="client-logo">
+                    <img src="sthub.jpg" alt="sthub">
+                </div>
+                <div class="client-logo">
+                    <img src="TD.jpg" alt="TD">
+                </div>
+                <div class="client-logo">
+                    <img src="telus.jpg" alt="telus">
+                </div>
+                <div class="client-logo">
+                    <img src="tf0.jpg" alt="tf0">
+                </div>
+                <div class="client-logo">
+                    <img src="tqs.jpg" alt="tqs">
+                </div>
+                <div class="client-logo">
+                    <img src="tv5.jpg" alt="tv5">
+                </div>
+                <div class="client-logo">
+                    <img src="tva.jpg" alt="tva">
+                </div>
+                <div class="client-logo">
+                    <img src="ultramar.jpg" alt="ultramar">
+                </div>
+                <div class="client-logo">
+                    <img src="videotron.jpg" alt="videotron">
+                </div>
+                <div class="client-logo">
+                    <img src="w.jpg" alt="w">
+                </div>
+                <!-- You can continue adding more logos as needed -->
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form action="https://formspree.io/f/xovjprkv" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
                     </div>
+                    <input type="hidden" name="_subject" value="New contact from jeffblain.com">
+                    <input type="text" name="_gotcha" style="display: none">
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
@@ -422,12 +619,12 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="logo">Jeff Blain</div>
+            <!--<div class="logo">Jeff Blain Mentalist</div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a> -->
             </div>
             <p class="footer-text">&copy; 2025 Jeff Blain. All Rights Reserved.</p>
         </div>

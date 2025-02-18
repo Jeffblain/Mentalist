@@ -1,0 +1,62 @@
+<!-- Add this to your CSS in the <style> section -->
+.language-switcher {
+    margin-left: 2rem;
+}
+
+.language-switcher select {
+    background-color: transparent;
+    color: var(--light-text);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-family: var(--font-primary);
+    cursor: pointer;
+}
+
+.language-switcher select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.language-switcher select option {
+    background-color: var(--primary-color);
+}
+
+/* Add this near the end of your existing styles for mobile responsiveness */
+@media (max-width: 768px) {
+    .language-switcher {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+<!-- Modify your nav section to include this after the nav-links ul -->
+<nav>
+    <div class="logo">Jeff Blain</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="language-switcher">
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+</nav>
+
+<!-- Add this JavaScript function before the closing </body> tag -->
+<script>
+    function changeLanguage() {
+        const language = document.getElementById('language-select').value;
+        if (language === 'fr') {
+            window.location.href = 'index-fr.html';
+        } else {
+            window.location.href = 'index.html';
+        }
+    }
+</script>
